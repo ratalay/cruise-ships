@@ -19,6 +19,8 @@ describe('Ship', () => {
     })
 
      it('should have a starting port', () => {
+       const itinerary = new Itinerary([port]);
+       ship = new Ship(itinerary)
      expect(ship.currentPort).toEqual(port);
     })
 
@@ -27,8 +29,11 @@ describe('Ship', () => {
 describe('setSail', () => {  
    
     it('can set sail', () => {
+      const itinerary = new Itinerary([port]);
+      ship = new Ship(itinerary);
     ship.setSail();
-    expect(ship.create).toBeFalsy();
+    expect(ship.currentPort).toBeFalsy();
+    //expect(ship.previousPort).toEqual(port);
 
 })
 })
