@@ -4,6 +4,7 @@ const {Port} = require('../src/ports.js');
 describe('tests', () => {
   let ship;
   let port;
+  let port2;
   beforeEach(() => {
     port = new Port('Dover')
     port2 = new Port('France North')
